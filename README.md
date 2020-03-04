@@ -1,23 +1,4 @@
-# multiple-controllers-in-sinatra-application
+# Comeback Corner
 
 
-This is the example to use multiple controllers in a Sinatra application. Please see my [blog]() for more information.
-
-#### Setup
-
-- ruby verison: 2.2.2
-
-- clone the repo:
-
-```
-git clone git@github.com:pingzh/multiple-controllers-in-sinatra-application.git
-cd multiple-controllers-in-sinatra-application
-```
-
-- start the server:
-
-```
-rackup config.ru -p 4567
-```
-
-- enjoy :)
+Here's the most epic Sinatra application you've ever seen, jampacked with MVC structure, worker processes, and a Vue-based frontend. I've decided to open-source this in case other Ruby devs who want to break free from Rails can do so in a somewhat scalable manner.
