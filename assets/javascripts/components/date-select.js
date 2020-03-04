@@ -1,7 +1,7 @@
 import Vue from 'vue/dist/vue.esm.js';
 import axios from 'axios';
 
-const Radios = Vue.component('Radios', {
+Vue.component('complaints-date-select', {
   data() {
     return {
       items: [1, 2, 3, 4],
@@ -34,5 +34,3 @@ const Radios = Vue.component('Radios', {
     }
   }
 });
-
-export default Radios;
