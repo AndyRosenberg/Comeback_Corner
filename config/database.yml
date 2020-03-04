@@ -1,0 +1,27 @@
+
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: comeback_corner_development
+  host: localhost
+  pool: 5
+  user: <%= ENV['PG_USER'] %>
+  password: <%= ENV['PG_PW'] %>
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: comeback_corner_test
+  host: localhost
+  pool: 5
+  user: <%= ENV['PG_USER'] %>
+  password: <%= ENV['PG_PW'] %>
+
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  	<title>Comeback Corner: Get Your Passive Agression On</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/main.bundle.css" />
+    <script type="text/javascript" src="/index.bundle.js"></script>
+  </head>
+
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <img src="/dist/logo.png">
+      </a>
+    </div>
+
+    <div id="nav-start" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="/">
+          Home
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-light">
+              Post Your Own
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <body>
+    <main id="app" class="container-fluid is-secondary">
+      <% if session[:message] %>
+        <h1 class="flash"><%== session.delete(:message) %></h1>
+      <% end %>
+      <%== yield %>
+    </main>
+  </body>
+</html>
