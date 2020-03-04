@@ -12,6 +12,4 @@ document.addEventListener('turbolinks:load', () => {
   new Vue({
     el: "#app",
   });
-
-  console.log(document.querySelector("#test"));
 });
