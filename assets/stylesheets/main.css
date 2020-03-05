@@ -5,3 +5,7 @@ textarea {
   width: 320px;
   height: 240px;
 }
+
+#title-logo {
+  text-shadow: -.75px 0 rgba(66,85,104, .75), 0 .75px rgba(66,85,104, .75), .75px 0 rgba(66,85,104, .75), 0 -.75px rgba(66,85,104, .75);
+}
