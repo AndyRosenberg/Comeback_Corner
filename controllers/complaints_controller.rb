@@ -1,6 +1,5 @@
 class ComplaintsController < Sinatra::Base    
   get "/complaints/new" do
-    session[:hi] = "there"
     erb 'complaints/new'.to_sym
   end
 

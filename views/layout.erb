@@ -36,7 +36,7 @@
 
 
   <body>
-    <main id="app" class="container-fluid is-secondary">
+    <main id="app" class="container-fluid">
       <% if session[:message] %>
         <h1 class="flash"><%== session.delete(:message) %></h1>
       <% end %>
