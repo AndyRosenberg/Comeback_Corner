@@ -16,8 +16,8 @@ Vue.component('vuetagsinput', {
     <div class="hero is-fullheight is-dark">
       <section class="hero is-halfheight">
         <div class="hero-body">
-          <div class="container">
-            <div class="section columns is-centered is-6">
+          <div id="new-complaint-form" class="container">
+            <div id="stand-up" class="columns is-centered is-6">
               <h1 class="has-text-white title is-1">Stand up for yourself</h1>
             </div>
             <div class="columns is-centered">
@@ -53,7 +53,7 @@ Vue.component('vuetagsinput', {
                   <div class="field">
                     <label for="body" class="label has-text-white">Complaint</label>
                     <div class="control has-icons-left">
-                      <textarea name="body" placeholder="Voice your complaint." required></textarea>
+                      <textarea rows="8" class="textarea" name="body" placeholder="Voice your complaint." required></textarea>
                     </div>
                   </div>
                   

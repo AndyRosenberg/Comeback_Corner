@@ -1,6 +1,10 @@
 class ComplaintsController < Sinatra::Base    
+  get "/feed" do
+    erb :'complaints/index'
+  end
+  
   get "/complaints/new" do
-    erb 'complaints/new'.to_sym
+    erb :'complaints/new'
   end
 
   post "/complaints" do
@@ -12,7 +16,7 @@ class ComplaintsController < Sinatra::Base
 
     if complaint.save
       session[:message] = "Good job"
-      erb :home
+      erb :'complaints/index'
     else
       session[:message] = "Something went wrong"
       redirect back
@@ -20,7 +24,9 @@ class ComplaintsController < Sinatra::Base
   end
 
   get "/complaints" do
+    set_time_zone
     content_type :json
-    body Complaint.order(created_at: :desc).to_json
+    params[:days_ago] = nil if params[:days_ago]&.empty?
+    body Complaint.in_json(params[:days_ago], set_time_zone)
   end
 end

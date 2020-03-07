@@ -6,6 +6,9 @@ require 'sidekiq/api'
 require 'sidekiq/web'
 require 'erubi'
 require "sinatra/activerecord"
+require "active_support/core_ext/time"
+require "geocoder"
+require "pry"
 
 require "./controllers/complaints_controller"
 require "./jobs/mail_job"
@@ -19,6 +22,12 @@ module Sinatra
       set :root, Dir.pwd.split("comeback_corner").first + "comeback_corner"
       set :erb, :escape_html => true
     end
+
+    helpers do
+      def set_time_zone
+        session[:time_zone] ||= (request.location.data["timezone"] || "America/Phoenix")
+      end
+    end
   end
 end
 
@@ -26,7 +35,7 @@ class App < Sinatra::Base
   use ComplaintsController
 
   get "/" do
-    erb :home
+    erb :'complaints/new'
   end
 
   get '/send_mail' do
@@ -34,5 +43,5 @@ class App < Sinatra::Base
 		<p>Added Job: #{MailWorker.perform_async}</p>
 		<p><a href='/'>Back</a></p>
 		"
-	end
+  end
 end

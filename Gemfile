@@ -11,6 +11,7 @@ gem 'sidekiq'
 gem 'mail'
 gem 'erubi'
 gem 'dotenv'
+gem 'geocoder'
 
 group :development, :test do
   gem 'pry'

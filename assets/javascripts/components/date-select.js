@@ -4,7 +4,7 @@ import axios from 'axios';
 Vue.component('complaints-date-select', {
   data() {
     return {
-      items: [1, 2, 3, 4],
+      items: [7, 30, 60, 365],
       complaints: null,
     };
   },
@@ -12,12 +12,13 @@ Vue.component('complaints-date-select', {
     <div>
       <div class="select is-dark is-fullwidth">
         <select @change="fetchData($event)">
-          <option v-for="item of items" :value="item">{{item}}</option>
+          <option value="" selected>All Time</option>
+          <option v-for="item of items" :value="item">Last {{item}} Days</option>
         </select>
       </div>
       <section>
         <div class="hero-body">
-          <div class="container">
+          <div class="container" id="feed-sections">
             <section class="section" v-for="complaint of complaints">
               <div class="columns is-variable is-8">
                 <div class="column is-5 is-offset-1 ">
@@ -43,8 +44,8 @@ Vue.component('complaints-date-select', {
   `,
   methods: {
     fetchData(e) {
-      let value = e ? e.target.value : "latest";
-      axios.get('/complaints', { params: { time: value } }).then(response => {
+      let value = e ? e.target.value : "";
+      axios.get('/complaints', { params: { days_ago: value } }).then(response => {
         this.complaints = response.data;
       });
     }

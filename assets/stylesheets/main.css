@@ -9,3 +9,11 @@ textarea {
 #title-logo {
   text-shadow: -.75px 0 rgba(66,85,104, .75), 0 .75px rgba(66,85,104, .75), .75px 0 rgba(66,85,104, .75), 0 -.75px rgba(66,85,104, .75);
 }
+
+#feed-sections section.section:first-of-type {
+  padding-top: .5rem;
+}
+
+#stand-up {
+  padding: 2rem;
+}

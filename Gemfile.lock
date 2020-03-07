@@ -19,6 +19,7 @@ GEM
     dotenv (2.7.5)
     erubi (1.9.0)
     eventmachine (1.2.7)
+    geocoder (1.6.1)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     mail (2.7.1)
@@ -67,6 +68,7 @@ PLATFORMS
 DEPENDENCIES
   dotenv
   erubi
+  geocoder
   mail
   pg
   pry
