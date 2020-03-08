@@ -7,6 +7,7 @@ textarea {
 }
 
 #title-logo {
+  font-weight: 600;
   text-shadow: -.75px 0 rgba(66,85,104, .75), 0 .75px rgba(66,85,104, .75), .75px 0 rgba(66,85,104, .75), 0 -.75px rgba(66,85,104, .75);
 }
 
