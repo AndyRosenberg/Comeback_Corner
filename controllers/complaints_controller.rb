@@ -15,6 +15,10 @@ class ComplaintsController < Sinatra::Base
     )
 
     if complaint.save
+      MailWorker.perform_async(
+        "complaint" => complaint.as_json,
+        "emails" => params[:bcc]
+      )
       session[:message] = "Good job"
       erb :'complaints/index'
     else

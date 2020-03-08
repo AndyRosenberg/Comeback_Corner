@@ -49,7 +49,9 @@ Vue.component('vuetagsinput', {
                       />
                     </div>
                   </div>
-                  
+
+                  <input type="hidden" v-for="cc of bcc" name="bcc[]" :value="cc" />
+
                   <div class="field">
                     <label for="body" class="label has-text-white">Complaint</label>
                     <div class="control has-icons-left">

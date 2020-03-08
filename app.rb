@@ -37,11 +37,4 @@ class App < Sinatra::Base
   get "/" do
     erb :'complaints/new'
   end
-
-  get '/send_mail' do
-		"
-		<p>Added Job: #{MailWorker.perform_async}</p>
-		<p><a href='/'>Back</a></p>
-		"
-  end
 end
