@@ -19,15 +19,16 @@ class ComplaintsController < Sinatra::Base
         "complaint" => complaint.as_json,
         "emails" => params[:bcc]
       )
-      session[:message] = "Good job"
+      session[:message] = "Your complaint has been posted!"
       erb :'complaints/index'
     else
-      session[:message] = "Something went wrong"
+      session[:message] = "Something went wrong. Please try again."
       redirect back
     end
   end
 
   get "/complaints" do
+    redirect "/feed" unless request.env["HTTP_ACCEPT"] == "application/json"
     set_time_zone
     content_type :json
     params[:days_ago] = nil if params[:days_ago]&.empty?

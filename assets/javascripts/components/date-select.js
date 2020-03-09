@@ -45,9 +45,11 @@ Vue.component('complaints-date-select', {
   methods: {
     fetchData(e) {
       let value = e ? e.target.value : "";
-      axios.get('/complaints', { params: { days_ago: value } }).then(response => {
-        this.complaints = response.data;
-      });
+      axios.get(
+        '/complaints', { 
+          params: { days_ago: value },
+          headers: {"Accept": "application/json"} 
+        }).then(response => { this.complaints = response.data });
     }
   },
   created() {

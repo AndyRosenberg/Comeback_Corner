@@ -12,7 +12,7 @@ class MailWorker
       <pre>#{options["complaint"]["body"]}</pre>
     MSG
 
-    (options["emails"] || []).each do |email|
+    options["emails"].each do |email|
       Mail.deliver do
         to      email
         from    'Comeback Corner <admin@po-it.com>'
