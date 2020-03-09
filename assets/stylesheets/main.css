@@ -18,3 +18,11 @@ textarea {
 #stand-up {
   padding: 2rem;
 }
+
+#flash {
+  margin: 0;
+}
+
+#flash.is-hidden {
+  transition: all 2s ease-in;
+}

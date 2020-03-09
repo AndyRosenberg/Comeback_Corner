@@ -110,6 +110,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_
 
 /***/ }),
 
+/***/ "./assets/javascripts/events/delete-button.js":
+/*!****************************************************!*\
+  !*** ./assets/javascripts/events/delete-button.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("window.addEventListener('load', () => {\n  let deleteBtn = document.getElementById('flash-delete');\n  if (deleteBtn) {\n    deleteBtn.addEventListener('click', (e) => {\n      document.getElementById('flash').classList.add('is-hidden');\n    });\n  }\n});\n\n\n\n//# sourceURL=webpack:///./assets/javascripts/events/delete-button.js?");
+
+/***/ }),
+
 /***/ "./assets/javascripts/index.js":
 /*!*************************************!*\
   !*** ./assets/javascripts/index.js ***!
@@ -118,7 +129,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var turbolinks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! turbolinks */ \"./node_modules/turbolinks/dist/turbolinks.js\");\n/* harmony import */ var turbolinks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(turbolinks__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _stylesheets_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../stylesheets/main.css */ \"./assets/stylesheets/main.css\");\n/* harmony import */ var _stylesheets_main_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_stylesheets_main_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var vue_turbolinks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-turbolinks */ \"./node_modules/vue-turbolinks/index.js\");\n/* harmony import */ var vue_dist_vue_esm_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue/dist/vue.esm.js */ \"./node_modules/vue/dist/vue.esm.js\");\n/* harmony import */ var _components_date_select_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/date-select.js */ \"./assets/javascripts/components/date-select.js\");\n/* harmony import */ var _components_vue_tags_input_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/vue-tags-input.js */ \"./assets/javascripts/components/vue-tags-input.js\");\n\n\n\n\n\n\n\nturbolinks__WEBPACK_IMPORTED_MODULE_0___default.a.start()\nvue_dist_vue_esm_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"].use(vue_turbolinks__WEBPACK_IMPORTED_MODULE_2__[\"default\"])\n\ndocument.addEventListener('turbolinks:load', () => {\n  new vue_dist_vue_esm_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]({\n    el: \"#app\",\n  });\n});\n\n\n//# sourceURL=webpack:///./assets/javascripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var turbolinks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! turbolinks */ \"./node_modules/turbolinks/dist/turbolinks.js\");\n/* harmony import */ var turbolinks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(turbolinks__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _stylesheets_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../stylesheets/main.css */ \"./assets/stylesheets/main.css\");\n/* harmony import */ var _stylesheets_main_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_stylesheets_main_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var vue_turbolinks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-turbolinks */ \"./node_modules/vue-turbolinks/index.js\");\n/* harmony import */ var vue_dist_vue_esm_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue/dist/vue.esm.js */ \"./node_modules/vue/dist/vue.esm.js\");\n/* harmony import */ var _events_delete_button_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./events/delete-button.js */ \"./assets/javascripts/events/delete-button.js\");\n/* harmony import */ var _events_delete_button_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_events_delete_button_js__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _components_date_select_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/date-select.js */ \"./assets/javascripts/components/date-select.js\");\n/* harmony import */ var _components_vue_tags_input_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/vue-tags-input.js */ \"./assets/javascripts/components/vue-tags-input.js\");\n\n\n\n\n\n\n\n\nturbolinks__WEBPACK_IMPORTED_MODULE_0___default.a.start()\nvue_dist_vue_esm_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"].use(vue_turbolinks__WEBPACK_IMPORTED_MODULE_2__[\"default\"])\n\ndocument.addEventListener('turbolinks:load', () => {\n  new vue_dist_vue_esm_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]({\n    el: \"#app\",\n  });\n});\n\n\n//# sourceURL=webpack:///./assets/javascripts/index.js?");
 
 /***/ }),
 

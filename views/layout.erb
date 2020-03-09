@@ -37,7 +37,14 @@
   <body>
     <main id="app" class="hero is-dark is-fullheight">
       <% if session[:message] %>
-        <h1 class="flash"><%== session.delete(:message) %></h1>
+        <article id="flash" class="message is-info is-fullwidth">
+          <div class="message-header">
+            <p><%== session.delete(:message) %></p>
+            <span id="flash-delete">
+              <button class="delete" aria-label="delete"></button>
+            </span>
+          </div>
+        </article>
       <% end %>
       <%== yield %>
     </main>
