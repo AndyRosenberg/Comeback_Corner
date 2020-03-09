@@ -1,7 +1,7 @@
 import Vue from 'vue/dist/vue.esm.js';
 import VueTagsInput from '@johmun/vue-tags-input';
 
-Vue.component('vuetagsinput', {
+Vue.component('new-complaint-form', {
   components: {
     VueTagsInput,
   },
