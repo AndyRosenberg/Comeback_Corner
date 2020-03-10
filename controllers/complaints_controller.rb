@@ -18,7 +18,8 @@ class ComplaintsController < Sinatra::Base
       MailWorker.perform_async(
         "complaint" => complaint.as_json,
         "emails" => params[:bcc]
-      )
+      ) if params[:bcc]&.any?
+
       session[:message] = "Your complaint has been posted!"
       erb :'complaints/index'
     else
