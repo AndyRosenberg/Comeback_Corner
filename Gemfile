@@ -4,7 +4,6 @@ ruby "2.5.7"
 
 gem "sinatra"
 gem 'thin'
-gem 'rack_csrf'
 gem "sinatra-activerecord"
 gem "pg"
 gem "rake"
