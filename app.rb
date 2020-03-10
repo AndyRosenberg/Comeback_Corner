@@ -21,7 +21,7 @@ module Sinatra
       set :session_secret, ENV["SESSION_SECRET"]
       set :root, Dir.pwd.split("comeback_corner").first + "comeback_corner"
       set :erb, :escape_html => true
-      use Rack::Csrf, :raise => true
+      use Rack::Protection::AuthenticityToken
     end
 
     helpers do

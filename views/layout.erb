@@ -4,7 +4,7 @@
   	<title>Comeback Corner: Get Your Passive Agression On</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <%== Rack::Csrf.metatag(env) %>
+    <meta name="_csrf" content="<%= session[:csrf] %>" />
     <link rel="stylesheet" type="text/css" href="/main.bundle.css" />
     <script type="text/javascript" src="/index.bundle.js"></script>
   </head>
