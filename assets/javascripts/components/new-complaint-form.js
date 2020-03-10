@@ -10,6 +10,7 @@ Vue.component('new-complaint-form', {
       tag: '',
       tags: [],
       bcc: null,
+      csrf: document.querySelector('meta[name=_csrf]').content,
     };
   },
   template: `
@@ -23,6 +24,7 @@ Vue.component('new-complaint-form', {
             <div class="columns is-centered">
               <div class="column is-5-tablet is-4-desktop is-3-widescreen">
                 <form action="/complaints" method="POST">
+                  <input type="hidden" name="_csrf" v-model="csrf" />
                   <div class="field">
                     <label for="" class="label has-text-white">Title</label>
                     <div class="control has-icons-left">
