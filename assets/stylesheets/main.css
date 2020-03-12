@@ -21,6 +21,10 @@ textarea {
 
 #flash {
   margin: 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 2;
 }
 
 #flash.is-hidden {

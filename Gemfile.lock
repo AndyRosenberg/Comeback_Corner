@@ -12,7 +12,6 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2)
-    agoo (2.12.0)
     coderay (1.1.2)
     concurrent-ruby (1.1.6)
     connection_pool (2.2.2)
@@ -67,7 +66,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  agoo
   dotenv
   erubi
   geocoder
