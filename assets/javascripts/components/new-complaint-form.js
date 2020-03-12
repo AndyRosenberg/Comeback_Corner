@@ -15,7 +15,7 @@ Vue.component('new-complaint-form', {
   },
   template: `
     <div class="hero is-fullheight is-dark">
-      <section class="hero is-halfheight">
+      <section>
         <div class="hero-body">
           <div id="new-complaint-form" class="container">
             <div id="stand-up" class="columns is-centered is-6">

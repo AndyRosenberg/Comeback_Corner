@@ -4,5 +4,6 @@ run.sh
 .env
 /.bundle/
 Dockerfile
+.dockerignore
 config/database.yml
 set_env.sh
