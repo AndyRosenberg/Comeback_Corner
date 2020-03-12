@@ -9,33 +9,33 @@
     <script type="text/javascript" src="/index.bundle.js"></script>
   </head>
 
-  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" id="title-logo" href="/feed">Comeback Corner</a>
-      <a class="navbar-item is-hidden-desktop" href="/feed">Feed</a>
-      <a class="navbar-item is-hidden-desktop" href="/complaints/new">Post Your Own</a>
-    </div>
-
-    <div id="nav-start" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="/feed">
-          Feed
-        </a>
+  <body>
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" id="title-logo" href="/feed">Comeback Corner</a>
+        <a class="navbar-item is-hidden-desktop" href="/feed">Feed</a>
+        <a class="navbar-item is-hidden-desktop" href="/complaints/new">Post Your Own</a>
       </div>
 
-      <div class="navbar-end">
-        <div class="navbar-item is-hidden-mobile">
-          <div class="buttons">
-            <a href="/complaints/new" class="button is-light">
-              Post Your Own
-            </a>
+      <div id="nav-start" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/feed">
+            Feed
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item is-hidden-mobile">
+            <div class="buttons">
+              <a href="/complaints/new" class="button is-light">
+                Post Your Own
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <body>
     <main id="app" class="hero is-dark is-fullheight">
       <% if session[:message] %>
         <article id="flash" class="message is-info is-fullwidth">

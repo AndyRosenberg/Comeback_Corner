@@ -25,7 +25,10 @@ module Sinatra
 
     helpers do
       def set_time_zone
-        session[:time_zone] ||= (request.location.data["timezone"] || "America/Phoenix")
+        session[:time_zone] ||= (
+          request.try(:location).try(:data).try(:fetch, "timezone", nil) ||
+          "America/Phoenix"
+        )
       end
     end
   end
