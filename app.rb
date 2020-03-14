@@ -17,8 +17,6 @@ require "./models/complaint"
 module Sinatra
   class Base
     configure do
-      enable :sessions
-      set :session_secret, ENV["SESSION_SECRET"]
       set :root, Dir.pwd.split("comeback_corner").first + "comeback_corner"
       set :erb, :escape_html => true
     end
@@ -35,6 +33,11 @@ module Sinatra
 end
 
 class App < Sinatra::Base
+  configure do
+    enable :sessions
+    set :session_secret, ENV["SESSION_SECRET"]
+  end
+
   use Rack::Protection::AuthenticityToken
   use ComplaintsController
 
