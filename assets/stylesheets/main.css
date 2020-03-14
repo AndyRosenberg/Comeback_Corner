@@ -30,3 +30,24 @@ textarea {
 #flash.is-hidden {
   transition: all 2s ease-in;
 }
+
+.complaint-body {
+  white-space: pre-wrap;
+  background: aliceblue;
+  padding: 2rem;
+  border-radius: 2px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+@media all and (max-width: 800px) {
+  .column {
+    max-width: 25rem;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .column {
+    max-width: 22rem;
+  }
+}

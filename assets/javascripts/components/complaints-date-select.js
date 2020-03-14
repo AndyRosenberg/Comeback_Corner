@@ -21,7 +21,7 @@ Vue.component('complaints-date-select', {
           <div class="container" id="feed-sections">
             <section class="section" v-for="complaint of complaints">
               <div class="columns is-variable is-8">
-                <div class="column is-5 is-offset-1 ">
+                <div class="column is-5 is-offset-1">
                   <div class="content is-medium">
                     <h2 class="subtitle is-5 has-text-grey">{{complaint.created_at}}</h2>
                     <h1 class="title has-text-white is-3">{{complaint.title}}</h1>
@@ -32,7 +32,7 @@ Vue.component('complaints-date-select', {
                 </div>
                 <div class="column is-5">
                   <div class="content is-medium">
-                    <pre>{{complaint.body}}</pre>
+                    <p class="complaint-body has-padding-2 has-text-grey-darker">{{complaint.body}}</p>
                   </div>
                 </div>
               </div>
